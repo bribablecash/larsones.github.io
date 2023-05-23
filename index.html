@@ -1,7 +1,95 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages test 2.</p>
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatiable" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eric Larson SWE</title>
+
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Picture Sources/ESL Logo.jpg" class="logo">
+                    <ul>
+                        <li><a href="#">Home Page</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p class="Title">Software Engineer</p>
+                    <h1>Hello, my name is Eric Larson, a Student at Indiana University currently seeking employment building solutions and products useful in consumers lives.</h1>
+                </div>
+                <div class="btns">
+                    <button><a href="Eric Larson Resume.pdf" style="color: #E74C32; text-decoration:none;" download>Download CV</a></button>
+                    <button><a href="https://www.linkedin.com/in/eric-larson-iu/" style="color: #E74C32; text-decoration:none;" target="_blank">LinkedIn</a></button>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col1">
+                        <img src="Picture Sources\Headshot.jpg">
+                    </div>
+                    <div class="about-col2">
+                        <h1 class="about-title">About Me</h1>
+                        <p>Hi, I'm Eric Larson, I am a Software Engineer studying to </p>
+                        </p>
+                        <div class="tab-names">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills and Certifications</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Skills</span><br>Java, Python, C, C++, SQL, JavaScript, Andriod Studio, Tableau</br></li>
+                                <li><span>Learn C# Course</span><br>CodeAcademy Certification</br></li>
+                                <li><span>C# Algorthims</span><br>LinkedIn Certification</br></li>
+                                <li><span>Learning C++</span><br>LinkedIn Certification</br></li>
+                                <li><span>Introduction to Linux</span><br>LinkedIn Certification</br></li>
+                                <li><span>SQL Essential Training</span><br>LinkedIn Certification</br></li>
+                                <li><span>Tableau Essential Training</span><br>LinkedIn Certification</br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Intern, Analytics Team</span><br>HealthScape Advisors, June 2022 - August 2022</br></li>
+                                <li><span>Computer Structures Teachers Assistant</span><br>Luddy School of Informatics, Computing, and Engineering, January 2022 - May 2022</br></li>
+                                <li><span>Peer Career Advisor</span><br>Luddy Career Services, August 2021 - May 2022</br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Indiana University of Bloomington</span><br>Luddy School of Informatics, Computing, and Engineering</br></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="portfolio">
+            <div class="container">
+                
+            </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </body>
 </html>
